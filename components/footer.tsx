@@ -1,0 +1,31 @@
+import Link from "next/link"
+import { Github, Linkedin, Mail } from "lucide-react"
+
+export function Footer() {
+  return (
+    <footer className="border-t py-6">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-4 md:mb-0">
+            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} 홍길동. All rights reserved.</p>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Github className="h-5 w-5" />
+              <span className="sr-only">GitHub</span>
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Linkedin className="h-5 w-5" />
+              <span className="sr-only">LinkedIn</span>
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Mail className="h-5 w-5" />
+              <span className="sr-only">이메일</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
