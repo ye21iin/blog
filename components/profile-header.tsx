@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Linkedin, Mail, BookOpen } from "lucide-react"
 import { profile } from "@/app/data/profile"
 
 export function ProfileHeader() {
@@ -38,6 +38,14 @@ export function ProfileHeader() {
               <a href={profile.linkedinUrl} target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
+              </a>
+            </Button>
+          )}
+          {profile.blogUrl && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={profile.blogUrl} target="_blank" rel="noopener noreferrer">
+                <BookOpen className="h-5 w-5" />
+                <span className="sr-only">Blog</span>
               </a>
             </Button>
           )}

@@ -8,7 +8,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin, BookOpen } from "lucide-react"
+import { profile } from "@/app/data/profile"
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -103,37 +104,51 @@ export default function ContactPage() {
               <Mail className="h-5 w-5 mt-0.5 text-muted-foreground" />
               <div>
                 <h3 className="font-medium">이메일</h3>
-                <p className="text-muted-foreground">example@email.com</p>
+                <p className="text-muted-foreground">{profile.email}</p>
               </div>
             </div>
-            <div className="flex items-start gap-4">
-              <Phone className="h-5 w-5 mt-0.5 text-muted-foreground" />
-              <div>
-                <h3 className="font-medium">전화번호</h3>
-                <p className="text-muted-foreground">010-1234-5678</p>
+            {profile.location && (
+              <div className="flex items-start gap-4">
+                <MapPin className="h-5 w-5 mt-0.5 text-muted-foreground" />
+                <div>
+                  <h3 className="font-medium">위치</h3>
+                  <p className="text-muted-foreground">{profile.location}</p>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <MapPin className="h-5 w-5 mt-0.5 text-muted-foreground" />
-              <div>
-                <h3 className="font-medium">위치</h3>
-                <p className="text-muted-foreground">서울특별시 강남구</p>
+            )}
+            {profile.blogUrl && (
+              <div className="flex items-start gap-4">
+                <BookOpen className="h-5 w-5 mt-0.5 text-muted-foreground" />
+                <div>
+                  <h3 className="font-medium">Blog</h3>
+                  <a href={profile.blogUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+                    {profile.blogUrl.replace('https://', '')}
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Github className="h-5 w-5 mt-0.5 text-muted-foreground" />
-              <div>
-                <h3 className="font-medium">GitHub</h3>
-                <p className="text-muted-foreground">github.com/username</p>
+            )}
+            {profile.githubUrl && (
+              <div className="flex items-start gap-4">
+                <Github className="h-5 w-5 mt-0.5 text-muted-foreground" />
+                <div>
+                  <h3 className="font-medium">GitHub</h3>
+                  <a href={profile.githubUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+                    {profile.githubUrl.replace('https://', '')}
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Linkedin className="h-5 w-5 mt-0.5 text-muted-foreground" />
-              <div>
-                <h3 className="font-medium">LinkedIn</h3>
-                <p className="text-muted-foreground">linkedin.com/in/username</p>
+            )}
+            {profile.linkedinUrl && (
+              <div className="flex items-start gap-4">
+                <Linkedin className="h-5 w-5 mt-0.5 text-muted-foreground" />
+                <div>
+                  <h3 className="font-medium">LinkedIn</h3>
+                  <a href={profile.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
+                    {profile.linkedinUrl.replace('https://', '')}
+                  </a>
+                </div>
               </div>
-            </div>
+            )}
           </CardContent>
         </Card>
       </div>

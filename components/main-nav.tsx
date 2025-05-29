@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
-import { Menu } from "lucide-react"
+import { Home, Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { useMobile } from "@/hooks/use-mobile"
 
@@ -13,8 +13,8 @@ export function MainNav() {
   return (
     <header className="border-b">
       <div className="container mx-auto px-4 flex h-16 items-center justify-between">
-        <Link href="/" className="font-bold text-xl">
-          Portfolio
+        <Link href="/" className="font-bold text-xl flex items-center">
+          <Home className="h-6 w-6" />
         </Link>
 
         {isMobile ? (
@@ -51,9 +51,6 @@ export function MainNav() {
         ) : (
           <div className="flex items-center gap-6">
             <nav className="flex gap-6">
-              <Link href="/" className="font-medium">
-                홈
-              </Link>
               <Link href="/resume" className="font-medium">
                 이력서
               </Link>
