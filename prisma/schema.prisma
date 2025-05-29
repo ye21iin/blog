@@ -39,7 +39,6 @@ model Post {
   coverImage      String?   @db.VarChar(500)
   published       Boolean   @default(false)
   featured        Boolean   @default(false)
-  authorId        String
   categoryId      String
   metaTitle       String?   @db.VarChar(60)
   metaDescription String?   @db.VarChar(160)
@@ -47,10 +46,8 @@ model Post {
   createdAt       DateTime  @default(now())
   updatedAt       DateTime
   postTags        PostTag[]
-  author          User      @relation(fields: [authorId], references: [id], onDelete: Cascade)
   category        Category  @relation(fields: [categoryId], references: [id])
 
-  @@index([authorId, published])
   @@index([categoryId])
   @@index([publishedAt, published])
 }
@@ -77,13 +74,10 @@ model Project {
   githubUrl    String?      @db.VarChar(500)
   featured     Boolean      @default(false)
   published    Boolean      @default(false)
-  authorId     String
   createdAt    DateTime     @default(now())
   updatedAt    DateTime
   projectTags  ProjectTag[]
-  author       User         @relation(fields: [authorId], references: [id], onDelete: Cascade)
 
-  @@index([authorId, published])
   @@index([featured, published])
 }
 
@@ -104,18 +98,4 @@ model Tag {
   createdAt    DateTime     @default(now())
   postTags     PostTag[]
   projectTags  ProjectTag[]
-}
-
-model User {
-  id          String    @id
-  email       String    @unique @db.VarChar(255)
-  name        String    @db.VarChar(100)
-  image       String?   @db.VarChar(500)
-  bio         String?
-  githubUrl   String?   @db.VarChar(255)
-  linkedinUrl String?   @db.VarChar(255)
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime
-  posts       Post[]
-  projects    Project[]
 }
