@@ -162,15 +162,3 @@ model ProjectTag {
   @@unique([projectId, tagId])
   @@map("project_tags")
 }
-
-model Resume {
-  id        String @id @default(cuid())
-  content   Json   // 이력서 데이터를 JSON으로 저장
-  version   Int    @default(1)
-  active    Boolean @default(true)
-  
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  
-  @@map("resumes")
-}
