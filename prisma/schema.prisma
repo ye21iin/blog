@@ -114,7 +114,6 @@ model User {
   bio         String?
   githubUrl   String?   @db.VarChar(255)
   linkedinUrl String?   @db.VarChar(255)
-  websiteUrl  String?   @db.VarChar(255)
   createdAt   DateTime  @default(now())
   updatedAt   DateTime
   posts       Post[]

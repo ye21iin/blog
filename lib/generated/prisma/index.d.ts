@@ -9452,7 +9452,6 @@ export namespace Prisma {
     bio: string | null
     githubUrl: string | null
     linkedinUrl: string | null
-    websiteUrl: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -9465,7 +9464,6 @@ export namespace Prisma {
     bio: string | null
     githubUrl: string | null
     linkedinUrl: string | null
-    websiteUrl: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -9478,7 +9476,6 @@ export namespace Prisma {
     bio: number
     githubUrl: number
     linkedinUrl: number
-    websiteUrl: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -9493,7 +9490,6 @@ export namespace Prisma {
     bio?: true
     githubUrl?: true
     linkedinUrl?: true
-    websiteUrl?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -9506,7 +9502,6 @@ export namespace Prisma {
     bio?: true
     githubUrl?: true
     linkedinUrl?: true
-    websiteUrl?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -9519,7 +9514,6 @@ export namespace Prisma {
     bio?: true
     githubUrl?: true
     linkedinUrl?: true
-    websiteUrl?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -9605,7 +9599,6 @@ export namespace Prisma {
     bio: string | null
     githubUrl: string | null
     linkedinUrl: string | null
-    websiteUrl: string | null
     createdAt: Date
     updatedAt: Date
     _count: UserCountAggregateOutputType | null
@@ -9635,7 +9628,6 @@ export namespace Prisma {
     bio?: boolean
     githubUrl?: boolean
     linkedinUrl?: boolean
-    websiteUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     posts?: boolean | User$postsArgs<ExtArgs>
@@ -9651,7 +9643,6 @@ export namespace Prisma {
     bio?: boolean
     githubUrl?: boolean
     linkedinUrl?: boolean
-    websiteUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -9664,7 +9655,6 @@ export namespace Prisma {
     bio?: boolean
     githubUrl?: boolean
     linkedinUrl?: boolean
-    websiteUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -9677,12 +9667,11 @@ export namespace Prisma {
     bio?: boolean
     githubUrl?: boolean
     linkedinUrl?: boolean
-    websiteUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "image" | "bio" | "githubUrl" | "linkedinUrl" | "websiteUrl" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "image" | "bio" | "githubUrl" | "linkedinUrl" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     posts?: boolean | User$postsArgs<ExtArgs>
     projects?: boolean | User$projectsArgs<ExtArgs>
@@ -9705,7 +9694,6 @@ export namespace Prisma {
       bio: string | null
       githubUrl: string | null
       linkedinUrl: string | null
-      websiteUrl: string | null
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["user"]>
@@ -10140,7 +10128,6 @@ export namespace Prisma {
     readonly bio: FieldRef<"User", 'String'>
     readonly githubUrl: FieldRef<"User", 'String'>
     readonly linkedinUrl: FieldRef<"User", 'String'>
-    readonly websiteUrl: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
   }
@@ -10715,7 +10702,6 @@ export namespace Prisma {
     bio: 'bio',
     githubUrl: 'githubUrl',
     linkedinUrl: 'linkedinUrl',
-    websiteUrl: 'websiteUrl',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -11358,7 +11344,6 @@ export namespace Prisma {
     bio?: StringNullableFilter<"User"> | string | null
     githubUrl?: StringNullableFilter<"User"> | string | null
     linkedinUrl?: StringNullableFilter<"User"> | string | null
-    websiteUrl?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     posts?: PostListRelationFilter
@@ -11373,7 +11358,6 @@ export namespace Prisma {
     bio?: SortOrderInput | SortOrder
     githubUrl?: SortOrderInput | SortOrder
     linkedinUrl?: SortOrderInput | SortOrder
-    websiteUrl?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     posts?: PostOrderByRelationAggregateInput
@@ -11391,7 +11375,6 @@ export namespace Prisma {
     bio?: StringNullableFilter<"User"> | string | null
     githubUrl?: StringNullableFilter<"User"> | string | null
     linkedinUrl?: StringNullableFilter<"User"> | string | null
-    websiteUrl?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     posts?: PostListRelationFilter
@@ -11406,7 +11389,6 @@ export namespace Prisma {
     bio?: SortOrderInput | SortOrder
     githubUrl?: SortOrderInput | SortOrder
     linkedinUrl?: SortOrderInput | SortOrder
-    websiteUrl?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
@@ -11425,7 +11407,6 @@ export namespace Prisma {
     bio?: StringNullableWithAggregatesFilter<"User"> | string | null
     githubUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
     linkedinUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
-    websiteUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
@@ -11976,7 +11957,6 @@ export namespace Prisma {
     bio?: string | null
     githubUrl?: string | null
     linkedinUrl?: string | null
-    websiteUrl?: string | null
     createdAt?: Date | string
     updatedAt: Date | string
     posts?: PostCreateNestedManyWithoutAuthorInput
@@ -11991,7 +11971,6 @@ export namespace Prisma {
     bio?: string | null
     githubUrl?: string | null
     linkedinUrl?: string | null
-    websiteUrl?: string | null
     createdAt?: Date | string
     updatedAt: Date | string
     posts?: PostUncheckedCreateNestedManyWithoutAuthorInput
@@ -12006,7 +11985,6 @@ export namespace Prisma {
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     githubUrl?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     posts?: PostUpdateManyWithoutAuthorNestedInput
@@ -12021,7 +11999,6 @@ export namespace Prisma {
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     githubUrl?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     posts?: PostUncheckedUpdateManyWithoutAuthorNestedInput
@@ -12036,7 +12013,6 @@ export namespace Prisma {
     bio?: string | null
     githubUrl?: string | null
     linkedinUrl?: string | null
-    websiteUrl?: string | null
     createdAt?: Date | string
     updatedAt: Date | string
   }
@@ -12049,7 +12025,6 @@ export namespace Prisma {
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     githubUrl?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -12062,7 +12037,6 @@ export namespace Prisma {
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     githubUrl?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -12591,7 +12565,6 @@ export namespace Prisma {
     bio?: SortOrder
     githubUrl?: SortOrder
     linkedinUrl?: SortOrder
-    websiteUrl?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -12604,7 +12577,6 @@ export namespace Prisma {
     bio?: SortOrder
     githubUrl?: SortOrder
     linkedinUrl?: SortOrder
-    websiteUrl?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -12617,7 +12589,6 @@ export namespace Prisma {
     bio?: SortOrder
     githubUrl?: SortOrder
     linkedinUrl?: SortOrder
-    websiteUrl?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -13492,7 +13463,6 @@ export namespace Prisma {
     bio?: string | null
     githubUrl?: string | null
     linkedinUrl?: string | null
-    websiteUrl?: string | null
     createdAt?: Date | string
     updatedAt: Date | string
     projects?: ProjectCreateNestedManyWithoutAuthorInput
@@ -13506,7 +13476,6 @@ export namespace Prisma {
     bio?: string | null
     githubUrl?: string | null
     linkedinUrl?: string | null
-    websiteUrl?: string | null
     createdAt?: Date | string
     updatedAt: Date | string
     projects?: ProjectUncheckedCreateNestedManyWithoutAuthorInput
@@ -13587,7 +13556,6 @@ export namespace Prisma {
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     githubUrl?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     projects?: ProjectUpdateManyWithoutAuthorNestedInput
@@ -13601,7 +13569,6 @@ export namespace Prisma {
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     githubUrl?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     projects?: ProjectUncheckedUpdateManyWithoutAuthorNestedInput
@@ -13800,7 +13767,6 @@ export namespace Prisma {
     bio?: string | null
     githubUrl?: string | null
     linkedinUrl?: string | null
-    websiteUrl?: string | null
     createdAt?: Date | string
     updatedAt: Date | string
     posts?: PostCreateNestedManyWithoutAuthorInput
@@ -13814,7 +13780,6 @@ export namespace Prisma {
     bio?: string | null
     githubUrl?: string | null
     linkedinUrl?: string | null
-    websiteUrl?: string | null
     createdAt?: Date | string
     updatedAt: Date | string
     posts?: PostUncheckedCreateNestedManyWithoutAuthorInput
@@ -13870,7 +13835,6 @@ export namespace Prisma {
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     githubUrl?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     posts?: PostUpdateManyWithoutAuthorNestedInput
@@ -13884,7 +13848,6 @@ export namespace Prisma {
     bio?: NullableStringFieldUpdateOperationsInput | string | null
     githubUrl?: NullableStringFieldUpdateOperationsInput | string | null
     linkedinUrl?: NullableStringFieldUpdateOperationsInput | string | null
-    websiteUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     posts?: PostUncheckedUpdateManyWithoutAuthorNestedInput
